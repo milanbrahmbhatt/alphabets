@@ -5,34 +5,34 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>0D9DD4A0-3E6E-4AC4-8544-D4E07626C78F</string>
+	<string>949F7072-CCFA-4FF5-82BD-96839F069419</string>
 	<key>IDESourceControlProjectName</key>
 	<string>alphabets</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>5862DBF9-0DB5-416C-9FE7-35A98B651D26</key>
-		<string>https://github.com/milanbrahmbhatt/alphabets.git</string>
+		<key>59A12B4E-6657-4612-A1D7-7304A862619C</key>
+		<string>https://github.com/milanbrahmbhatt/alphabets</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>alphabets/alphabets.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>5862DBF9-0DB5-416C-9FE7-35A98B651D26</key>
+		<key>59A12B4E-6657-4612-A1D7-7304A862619C</key>
 		<string>../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>https://github.com/milanbrahmbhatt/alphabets.git</string>
+	<string>https://github.com/milanbrahmbhatt/alphabets</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>110</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>5862DBF9-0DB5-416C-9FE7-35A98B651D26</string>
+	<string>59A12B4E-6657-4612-A1D7-7304A862619C</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>5862DBF9-0DB5-416C-9FE7-35A98B651D26</string>
+			<string>59A12B4E-6657-4612-A1D7-7304A862619C</string>
 			<key>IDESourceControlWCCName</key>
 			<string>alphabets</string>
 		</dict>
