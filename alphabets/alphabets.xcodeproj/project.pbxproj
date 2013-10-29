@@ -11,7 +11,6 @@
 		56546E42181F1DDC00BD37E2 /* LetterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 56546E41181F1DDC00BD37E2 /* LetterViewController.m */; };
 		56546E45181F1E3900BD37E2 /* ModelController.m in Sources */ = {isa = PBXBuildFile; fileRef = 56546E44181F1E3900BD37E2 /* ModelController.m */; };
 		56546E47181F2A7F00BD37E2 /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 56546E46181F2A7F00BD37E2 /* Storyboard.storyboard */; };
-		56546E49181F3F7100BD37E2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 56546E48181F3F7100BD37E2 /* Main.storyboard */; };
 		566AF3C518184FDF003A00E7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 566AF3C418184FDF003A00E7 /* Foundation.framework */; };
 		566AF3C718184FDF003A00E7 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 566AF3C618184FDF003A00E7 /* CoreGraphics.framework */; };
 		566AF3C918184FDF003A00E7 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 566AF3C818184FDF003A00E7 /* UIKit.framework */; };
@@ -47,7 +46,6 @@
 		56546E43181F1E3900BD37E2 /* ModelController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ModelController.h; sourceTree = "<group>"; };
 		56546E44181F1E3900BD37E2 /* ModelController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ModelController.m; sourceTree = "<group>"; };
 		56546E46181F2A7F00BD37E2 /* Storyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Storyboard.storyboard; sourceTree = "<group>"; };
-		56546E48181F3F7100BD37E2 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		566AF3C118184FDF003A00E7 /* alphabets.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = alphabets.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		566AF3C418184FDF003A00E7 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		566AF3C618184FDF003A00E7 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -196,7 +194,6 @@
 			isa = PBXGroup;
 			children = (
 				56546E46181F2A7F00BD37E2 /* Storyboard.storyboard */,
-				56546E48181F3F7100BD37E2 /* Main.storyboard */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -301,7 +298,6 @@
 				566AF3CF18184FDF003A00E7 /* InfoPlist.strings in Resources */,
 				566AF3D718184FDF003A00E7 /* Images.xcassets in Resources */,
 				56546E47181F2A7F00BD37E2 /* Storyboard.storyboard in Resources */,
-				56546E49181F3F7100BD37E2 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
