@@ -24,6 +24,8 @@
 		566AF3E018184FDF003A00E7 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 566AF3C818184FDF003A00E7 /* UIKit.framework */; };
 		566AF3E818184FDF003A00E7 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 566AF3E618184FDF003A00E7 /* InfoPlist.strings */; };
 		566AF3EA18184FDF003A00E7 /* alphabetsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 566AF3E918184FDF003A00E7 /* alphabetsTests.m */; };
+		6B825BB81818D1610050EDBF /* Word.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B825BB71818D1610050EDBF /* Word.m */; };
+		6B825BBB1818D2740050EDBF /* Dictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B825BBA1818D2740050EDBF /* Dictionary.m */; };
 		863B327A5C5542C188284518 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AD265C3BD324196967E0BBC /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -62,6 +64,10 @@
 		566AF3E518184FDF003A00E7 /* alphabetsTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "alphabetsTests-Info.plist"; sourceTree = "<group>"; };
 		566AF3E718184FDF003A00E7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		566AF3E918184FDF003A00E7 /* alphabetsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = alphabetsTests.m; sourceTree = "<group>"; };
+		6B825BB61818D1610050EDBF /* Word.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Word.h; sourceTree = "<group>"; };
+		6B825BB71818D1610050EDBF /* Word.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Word.m; sourceTree = "<group>"; };
+		6B825BB91818D2740050EDBF /* Dictionary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Dictionary.h; sourceTree = "<group>"; };
+		6B825BBA1818D2740050EDBF /* Dictionary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Dictionary.m; sourceTree = "<group>"; };
 		7E1DFE385FF74D0CB17CB179 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 		8AD265C3BD324196967E0BBC /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -178,6 +184,10 @@
 		566AF3F41818506F003A00E7 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				6B825BB61818D1610050EDBF /* Word.h */,
+				6B825BB71818D1610050EDBF /* Word.m */,
+				6B825BB91818D2740050EDBF /* Dictionary.h */,
+				6B825BBA1818D2740050EDBF /* Dictionary.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -347,7 +357,9 @@
 				56546E3F181F1D8100BD37E2 /* AlphabetsViewController.m in Sources */,
 				56546E45181F1E3900BD37E2 /* ModelController.m in Sources */,
 				566AF3D518184FDF003A00E7 /* AppDelegate.m in Sources */,
+				6B825BBB1818D2740050EDBF /* Dictionary.m in Sources */,
 				566AF3D118184FDF003A00E7 /* main.m in Sources */,
+				6B825BB81818D1610050EDBF /* Word.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
