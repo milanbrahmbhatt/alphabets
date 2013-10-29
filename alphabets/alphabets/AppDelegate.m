@@ -26,9 +26,9 @@
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
     
-    DictionaryTableViewController *dtvc = [[DictionaryTableViewController alloc] init];
-    UINavigationController *nc = [[UINavigationController alloc] initWithRootViewController:dtvc];
-    self.window.rootViewController = nc;
+//    DictionaryTableViewController *dtvc = [[DictionaryTableViewController alloc] init];
+//    UINavigationController *nc = [[UINavigationController alloc] initWithRootViewController:dtvc];
+//    self.window.rootViewController = nc;
     
     return YES;
 }

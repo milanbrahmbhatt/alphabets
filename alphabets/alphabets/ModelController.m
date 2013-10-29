@@ -8,9 +8,10 @@
 
 #import "ModelController.h"
 #import "LetterViewController.h"
+#import "Word.h"
 
 @interface ModelController()
-@property (readonly, strong, nonatomic) NSArray *pageData;
+
 @end
 
 @implementation ModelController
@@ -20,8 +21,19 @@
     self = [super init];
     if (self) {
         // Create the data model.
-        NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
-        _pageData = [[dateFormatter monthSymbols] copy];
+        
+        // Sample data
+        Word *word1 = [[Word alloc] initWithWordLetter:@"Ant" firstLetter:@"A"];
+        Word *word2 = [[Word alloc] initWithWordLetter:@"Bat" firstLetter:@"B"];
+        Word *word3 = [[Word alloc] initWithWordLetter:@"Cameleon" firstLetter:@"C"];
+        Word *word4 = [[Word alloc] initWithWordLetter:@"Dog" firstLetter:@"D"];
+        Word *word5 = [[Word alloc] initWithWordLetter:@"Elephant" firstLetter:@"E"];
+        Word *word6 = [[Word alloc] initWithWordLetter:@"Frog" firstLetter:@"F"];
+        Word *word7 = [[Word alloc] initWithWordLetter:@"Giraffe" firstLetter:@"G"];
+        Word *word8 = [[Word alloc] initWithWordLetter:@"Hyena" firstLetter:@"H"];
+        Word *word9 = [[Word alloc] initWithWordLetter:@"Zynga" firstLetter:@"Z"];
+        
+        _pageData = @[word1, word2, word3, word4, word5, word6, word7, word8, word9];
     }
     return self;
 }
@@ -35,6 +47,7 @@
     
     // Create a new view controller and pass suitable data.
     LetterViewController *letterViewController = [storyboard instantiateViewControllerWithIdentifier:@"LetterViewController"];
+    //TODO randomize words?
     letterViewController.dataObject = self.pageData[index];
     return letterViewController;
 }

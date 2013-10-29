@@ -10,4 +10,14 @@
 
 @implementation Word
 
+-(Word *)initWithWordLetter:(NSString *)word firstLetter:(NSString *)letter
+{
+    self.word = word;
+    self.firstLetter = letter;
+    
+    // Go to flickr and get image urls. 
+    
+    return self;
+}
+
 @end

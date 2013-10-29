@@ -34,17 +34,72 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cRf-nm-ECG">
-                                <rect key="frame" x="20" y="259" width="280" height="49"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cartoon-ant-8.gif" translatesAutoresizingMaskIntoConstraints="NO" id="wgW-8h-B6l">
+                                <rect key="frame" x="0.0" y="134" width="320" height="357"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="320" id="6R1-fY-VOZ"/>
+                                    <constraint firstAttribute="height" constant="357" id="Cf8-oA-gQh"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="A" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cRf-nm-ECG">
+                                <rect key="frame" x="0.0" y="0.0" width="144" height="172"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="172" id="onA-nq-eab"/>
+                                    <constraint firstAttribute="width" constant="144" id="wti-cz-Ofl"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="150"/>
                                 <color key="textColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Word" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3al-3M-gf4">
+                                <rect key="frame" x="0.0" y="470" width="320" height="49"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="49" id="AaL-IV-HMD"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="320" id="CwK-tE-9xd"/>
+                                    <constraint firstAttribute="width" constant="320" id="gkh-wd-mmB"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="50"/>
+                                <color key="textColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BnC-Z1-Pnk">
+                                <rect key="frame" x="231" y="527" width="69" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Dictionary">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="onDictionaryTap:" destination="VT0-oQ-qQb" eventType="touchUpInside" id="hF9-jb-R7U"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Blc-4y-ogJ">
+                                <rect key="frame" x="20" y="527" width="41" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Home">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
                         </subviews>
+                        <constraints>
+                            <constraint firstItem="0hs-Q8-LkF" firstAttribute="top" secondItem="BnC-Z1-Pnk" secondAttribute="bottom" constant="11" id="5T6-Dw-LKU"/>
+                            <constraint firstItem="BnC-Z1-Pnk" firstAttribute="top" secondItem="3al-3M-gf4" secondAttribute="bottom" constant="8" symbolic="YES" id="6OY-u4-J16"/>
+                            <constraint firstItem="3al-3M-gf4" firstAttribute="leading" secondItem="aZy-8b-TQx" secondAttribute="leading" id="LX5-pu-gHY"/>
+                            <constraint firstItem="3al-3M-gf4" firstAttribute="leading" secondItem="cRf-nm-ECG" secondAttribute="leading" id="PcM-tg-mxV"/>
+                            <constraint firstItem="cRf-nm-ECG" firstAttribute="top" secondItem="aZy-8b-TQx" secondAttribute="top" id="QdU-Ji-Xrq"/>
+                            <constraint firstItem="BnC-Z1-Pnk" firstAttribute="baseline" secondItem="Blc-4y-ogJ" secondAttribute="baseline" id="Z03-ne-8pP"/>
+                            <constraint firstItem="3al-3M-gf4" firstAttribute="leading" secondItem="wgW-8h-B6l" secondAttribute="leading" id="biO-hy-UzD"/>
+                            <constraint firstItem="Blc-4y-ogJ" firstAttribute="top" secondItem="wgW-8h-B6l" secondAttribute="bottom" constant="36" id="jhv-mf-wvh"/>
+                            <constraint firstAttribute="trailing" secondItem="BnC-Z1-Pnk" secondAttribute="trailing" constant="20" symbolic="YES" id="ji9-lg-uWU"/>
+                            <constraint firstItem="Blc-4y-ogJ" firstAttribute="leading" secondItem="aZy-8b-TQx" secondAttribute="leading" constant="20" symbolic="YES" id="w96-lq-EOR"/>
+                        </constraints>
                     </view>
                     <connections>
-                        <outlet property="dataLabel" destination="cRf-nm-ECG" id="Jbx-2t-ZYH"/>
+                        <outlet property="letterImage" destination="wgW-8h-B6l" id="Nso-5o-ilo"/>
+                        <outlet property="letterLabel" destination="cRf-nm-ECG" id="4rt-lX-p7X"/>
+                        <outlet property="word" destination="3al-3M-gf4" id="ShP-FR-fJT"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xeD-cV-7DY" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -52,6 +107,9 @@
             <point key="canvasLocation" x="221" y="78"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="cartoon-ant-8.gif" width="350" height="450"/>
+    </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
