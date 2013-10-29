@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="4510" systemVersion="12F45" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3742"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="WordEditViewController">
+            <connections>
+                <outlet property="playButton" destination="5yK-MT-oMI" id="nMV-8j-biO"/>
+                <outlet property="recordButton" destination="vnW-F0-1nv" id="qLf-Rl-dl1"/>
+                <outlet property="view" destination="1" id="3"/>
+                <outlet property="wordImage" destination="mKO-ce-6xH" id="dH1-RL-sXc"/>
+                <outlet property="wordLabel" destination="HXl-9d-pxZ" id="ffo-Wr-brV"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="1">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The Word" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HXl-9d-pxZ">
+                    <rect key="frame" x="70" y="58" width="180" height="60"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="60" id="KG8-GH-fAh"/>
+                        <constraint firstAttribute="width" constant="180" id="emy-dM-P9B"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="mKO-ce-6xH">
+                    <rect key="frame" x="60" y="151" width="200" height="200"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="200" id="d31-mX-bPb"/>
+                        <constraint firstAttribute="width" constant="200" id="qU0-Xa-S4P"/>
+                    </constraints>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5yK-MT-oMI">
+                    <rect key="frame" x="100" y="408" width="120" height="30"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="JEk-aJ-Y0g"/>
+                        <constraint firstAttribute="width" constant="120" id="YVG-4M-Qry"/>
+                    </constraints>
+                    <state key="normal" title="Play Audio">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vnW-F0-1nv">
+                    <rect key="frame" x="100" y="453" width="120" height="30"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="kah-WC-R7B"/>
+                        <constraint firstAttribute="width" constant="120" id="y1p-VE-U6G"/>
+                    </constraints>
+                    <state key="normal" title="Record Audio">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="HXl-9d-pxZ" firstAttribute="top" secondItem="1" secondAttribute="top" constant="58" id="GD9-k2-OsU"/>
+                <constraint firstItem="vnW-F0-1nv" firstAttribute="leading" secondItem="1" secondAttribute="leading" constant="100" id="OVk-UW-gv1"/>
+                <constraint firstItem="HXl-9d-pxZ" firstAttribute="leading" secondItem="1" secondAttribute="leading" constant="70" id="PXU-Nd-Zrm"/>
+                <constraint firstItem="mKO-ce-6xH" firstAttribute="top" secondItem="HXl-9d-pxZ" secondAttribute="bottom" constant="33" id="fyJ-7y-gOD"/>
+                <constraint firstItem="5yK-MT-oMI" firstAttribute="top" secondItem="mKO-ce-6xH" secondAttribute="bottom" constant="57" id="g4x-x2-rZf"/>
+                <constraint firstItem="mKO-ce-6xH" firstAttribute="leading" secondItem="1" secondAttribute="leading" constant="60" id="nKZ-eH-AFX"/>
+                <constraint firstItem="5yK-MT-oMI" firstAttribute="leading" secondItem="1" secondAttribute="leading" constant="100" id="x0D-DR-D4T"/>
+                <constraint firstItem="vnW-F0-1nv" firstAttribute="top" secondItem="5yK-MT-oMI" secondAttribute="bottom" constant="15" id="xKs-sE-3LF"/>
+            </constraints>
+            <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+        </view>
+    </objects>
+</document>

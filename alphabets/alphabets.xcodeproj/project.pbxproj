@@ -23,8 +23,14 @@
 		566AF3E018184FDF003A00E7 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 566AF3C818184FDF003A00E7 /* UIKit.framework */; };
 		566AF3E818184FDF003A00E7 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 566AF3E618184FDF003A00E7 /* InfoPlist.strings */; };
 		566AF3EA18184FDF003A00E7 /* alphabetsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 566AF3E918184FDF003A00E7 /* alphabetsTests.m */; };
+		6B7B2A941819E8FC00513279 /* WordEditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B7B2A921819E8FC00513279 /* WordEditViewController.m */; };
+		6B7B2A951819E8FC00513279 /* WordEditViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B7B2A931819E8FC00513279 /* WordEditViewController.xib */; };
+		6B7B2A991819EA0C00513279 /* DictionaryTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B7B2A971819EA0C00513279 /* DictionaryTableViewController.m */; };
+		6B7B2A9A1819EA0C00513279 /* DictionaryTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B7B2A981819EA0C00513279 /* DictionaryTableViewController.xib */; };
 		6B825BB81818D1610050EDBF /* Word.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B825BB71818D1610050EDBF /* Word.m */; };
 		6B825BBB1818D2740050EDBF /* Dictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B825BBA1818D2740050EDBF /* Dictionary.m */; };
+		6BC7E2EB181F3860008BEF8F /* DictionaryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC7E2EA181F3860008BEF8F /* DictionaryCell.m */; };
+		6BC7E2ED181F386D008BEF8F /* DictionaryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6BC7E2EC181F386D008BEF8F /* DictionaryCell.xib */; };
 		863B327A5C5542C188284518 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AD265C3BD324196967E0BBC /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -62,10 +68,19 @@
 		566AF3E518184FDF003A00E7 /* alphabetsTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "alphabetsTests-Info.plist"; sourceTree = "<group>"; };
 		566AF3E718184FDF003A00E7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		566AF3E918184FDF003A00E7 /* alphabetsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = alphabetsTests.m; sourceTree = "<group>"; };
+		6B7B2A911819E8FC00513279 /* WordEditViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WordEditViewController.h; sourceTree = "<group>"; };
+		6B7B2A921819E8FC00513279 /* WordEditViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WordEditViewController.m; sourceTree = "<group>"; };
+		6B7B2A931819E8FC00513279 /* WordEditViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WordEditViewController.xib; sourceTree = "<group>"; };
+		6B7B2A961819EA0C00513279 /* DictionaryTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DictionaryTableViewController.h; sourceTree = "<group>"; };
+		6B7B2A971819EA0C00513279 /* DictionaryTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DictionaryTableViewController.m; sourceTree = "<group>"; };
+		6B7B2A981819EA0C00513279 /* DictionaryTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DictionaryTableViewController.xib; sourceTree = "<group>"; };
 		6B825BB61818D1610050EDBF /* Word.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Word.h; sourceTree = "<group>"; };
 		6B825BB71818D1610050EDBF /* Word.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Word.m; sourceTree = "<group>"; };
 		6B825BB91818D2740050EDBF /* Dictionary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Dictionary.h; sourceTree = "<group>"; };
 		6B825BBA1818D2740050EDBF /* Dictionary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Dictionary.m; sourceTree = "<group>"; };
+		6BC7E2E9181F3860008BEF8F /* DictionaryCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DictionaryCell.h; sourceTree = "<group>"; };
+		6BC7E2EA181F3860008BEF8F /* DictionaryCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DictionaryCell.m; sourceTree = "<group>"; };
+		6BC7E2EC181F386D008BEF8F /* DictionaryCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DictionaryCell.xib; sourceTree = "<group>"; };
 		7E1DFE385FF74D0CB17CB179 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 		8AD265C3BD324196967E0BBC /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -194,6 +209,9 @@
 			isa = PBXGroup;
 			children = (
 				56546E46181F2A7F00BD37E2 /* Storyboard.storyboard */,
+				6BC7E2E9181F3860008BEF8F /* DictionaryCell.h */,
+				6BC7E2EA181F3860008BEF8F /* DictionaryCell.m */,
+				6BC7E2EC181F386D008BEF8F /* DictionaryCell.xib */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -207,6 +225,12 @@
 				56546E41181F1DDC00BD37E2 /* LetterViewController.m */,
 				56546E43181F1E3900BD37E2 /* ModelController.h */,
 				56546E44181F1E3900BD37E2 /* ModelController.m */,
+				6B7B2A911819E8FC00513279 /* WordEditViewController.h */,
+				6B7B2A921819E8FC00513279 /* WordEditViewController.m */,
+				6B7B2A931819E8FC00513279 /* WordEditViewController.xib */,
+				6B7B2A961819EA0C00513279 /* DictionaryTableViewController.h */,
+				6B7B2A971819EA0C00513279 /* DictionaryTableViewController.m */,
+				6B7B2A981819EA0C00513279 /* DictionaryTableViewController.xib */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -295,7 +319,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6BC7E2ED181F386D008BEF8F /* DictionaryCell.xib in Resources */,
 				566AF3CF18184FDF003A00E7 /* InfoPlist.strings in Resources */,
+				6B7B2A9A1819EA0C00513279 /* DictionaryTableViewController.xib in Resources */,
+				6B7B2A951819E8FC00513279 /* WordEditViewController.xib in Resources */,
 				566AF3D718184FDF003A00E7 /* Images.xcassets in Resources */,
 				56546E47181F2A7F00BD37E2 /* Storyboard.storyboard in Resources */,
 			);
@@ -352,10 +379,13 @@
 				56546E42181F1DDC00BD37E2 /* LetterViewController.m in Sources */,
 				56546E3F181F1D8100BD37E2 /* AlphabetsViewController.m in Sources */,
 				56546E45181F1E3900BD37E2 /* ModelController.m in Sources */,
+				6B7B2A941819E8FC00513279 /* WordEditViewController.m in Sources */,
 				566AF3D518184FDF003A00E7 /* AppDelegate.m in Sources */,
 				6B825BBB1818D2740050EDBF /* Dictionary.m in Sources */,
+				6BC7E2EB181F3860008BEF8F /* DictionaryCell.m in Sources */,
 				566AF3D118184FDF003A00E7 /* main.m in Sources */,
 				6B825BB81818D1610050EDBF /* Word.m in Sources */,
+				6B7B2A991819EA0C00513279 /* DictionaryTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
