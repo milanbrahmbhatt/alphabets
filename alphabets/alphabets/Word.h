@@ -15,6 +15,7 @@
 @property (nonatomic, strong) UIImage *image;
 @property (nonatomic, strong) NSString *imageUrl;
 
--(Word *)initWithWordLetter:(NSString *)word firstLetter:(NSString *)letter;
+- (id)initWithString:(NSString *)word letter:(NSString *)letter;
+- (id)initWithString:(NSString *)word letter:(NSString *)letter image:(UIImage *)image;
 
 @end

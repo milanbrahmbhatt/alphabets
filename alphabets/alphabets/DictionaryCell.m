@@ -19,6 +19,13 @@
     return self;
 }
 
+- (void) initWithWord:(Word *)word
+{
+    self.word = word;
+    self.wordLabel.text = word.word;
+    self.imageView.image = word.image;
+}
+
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated
 {
     [super setSelected:selected animated:animated];

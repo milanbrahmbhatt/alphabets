@@ -7,10 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Word.h"
 
 @interface DictionaryCell : UITableViewCell
 
 @property (weak, nonatomic) IBOutlet UIImageView *wordImage;
 @property (weak, nonatomic) IBOutlet UILabel *wordLabel;
+@property (weak, nonatomic) Word *word;
+
+- (void) initWithWord:(Word *)word;
 
 @end

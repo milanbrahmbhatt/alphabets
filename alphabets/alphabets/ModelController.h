@@ -11,7 +11,7 @@
 @class LetterViewController;
 
 @interface ModelController : NSObject <UIPageViewControllerDataSource>
-@property (readonly, strong, nonatomic) NSArray *pageData;
+
 - (LetterViewController *)viewControllerAtIndex:(NSUInteger)index storyboard:(UIStoryboard *)storyboard;
 - (NSUInteger)indexOfViewController:(LetterViewController *)viewController;
 

@@ -7,12 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "Word.h"
 
 @interface LetterViewController : UIViewController
-@property (weak, nonatomic) IBOutlet UILabel *letterLabel;
-@property (weak, nonatomic) IBOutlet UIImageView *letterImage;
-@property (weak, nonatomic) IBOutlet UILabel *word;
-- (IBAction)onDictionaryTap:(id)sender;
-@property (strong, nonatomic) Word *dataObject;
+@property (strong, nonatomic) IBOutlet UILabel *dataLabel;
+@property (strong, nonatomic) id dataObject;
 @end

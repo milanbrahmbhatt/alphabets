@@ -10,13 +10,18 @@
 
 @implementation Word
 
--(Word *)initWithWordLetter:(NSString *)word firstLetter:(NSString *)letter
+- (id)initWithString:(NSString *)word letter:(NSString *)letter
 {
     self.word = word;
     self.firstLetter = letter;
-    
-    // Go to flickr and get image urls. 
-    
+    return self;
+}
+
+- (id)initWithString:(NSString *)word letter:(NSString *)letter image:(UIImage *)image
+{
+    self.word = word;
+    self.firstLetter = letter;
+    self.image = image;
     return self;
 }
 

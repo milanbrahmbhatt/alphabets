@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Word.h"
 
 @interface WordEditViewController : UIViewController
 
@@ -14,5 +15,10 @@
 @property (weak, nonatomic) IBOutlet UIImageView *wordImage;
 @property (weak, nonatomic) IBOutlet UIButton *playButton;
 @property (weak, nonatomic) IBOutlet UIButton *recordButton;
+@property (weak, nonatomic) Word *word;
+
+- (void) initWithWord:(Word *)word;
+
+
 
 @end

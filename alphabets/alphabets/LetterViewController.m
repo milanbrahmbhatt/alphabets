@@ -7,7 +7,6 @@
 //
 
 #import "LetterViewController.h"
-#import "DictionaryTableViewController.h"
 
 @interface LetterViewController ()
 
@@ -39,24 +38,7 @@
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
-
-    self.letterLabel.text = self.dataObject.firstLetter;
-    self.word.text = self.dataObject.word;
-    // TODO image load
+    self.dataLabel.text = [self.dataObject description];
 }
 
-- (void)dismiss
-{
-    [self dismissViewControllerAnimated:YES completion:nil];
-}
-
-- (IBAction)onDictionaryTap:(id)sender {
-    DictionaryTableViewController *dtvc = [[DictionaryTableViewController alloc] init];
-    UINavigationController *nc = [[UINavigationController alloc] initWithRootViewController:dtvc];
-    
-    dtvc.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Done" style:UIBarButtonItemStylePlain target:self action:@selector(dismiss)];
-    
-    [self presentViewController:nc animated:YES completion:nil];
-
-}
 @end

@@ -11,9 +11,16 @@
 
 @interface Dictionary : NSObject
 
-@property (nonatomic, strong) NSMutableArray *wordList;
+@property (nonatomic, strong) NSMutableArray *dictionary;
 
-- (BOOL) addWordForLetterToDictionary:(Word *)word letter:(NSString *)letter;
-- (NSArray *) wordListForLetter:(NSString *)letter;
-   
+- (void) initDictionary;
+- (BOOL) addWordForLetter:(Word *)word letter:(NSString *)letter;
+- (NSArray *) wordArrayForIndex:(int)index;
+- (NSArray *) wordArrayForLetter:(NSString *)letter;
+- (NSString *) letterFromInt:(int) index;
+- (int) intFromLetter: (NSString *) letter;
+- (Word *) randomWordForLetter:(NSString *)letter;
+- (Word *) randomWordForIntegerIndex:(int)index;
+- (NSMutableArray *) defaultDictionary;
+
 @end

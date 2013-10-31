@@ -7,6 +7,8 @@
 //
 
 #import "DictionaryTableViewController.h"
+#import "WordEditViewController.h"
+#import "DictionaryCell.h"
 
 @interface DictionaryTableViewController ()
 
@@ -29,6 +31,9 @@
     
     UINib *customNib = [UINib nibWithNibName:@"DictionaryCell" bundle:nil];
     [self.tableView registerNib:customNib forCellReuseIdentifier:@"DictionaryCell"];
+    
+    self.dictionary = [[Dictionary alloc] init];
+    [self.dictionary initDictionary];
 }
 
 - (void)didReceiveMemoryWarning
@@ -41,27 +46,34 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    // Return the number of sections.
     return 26;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    // Return the number of rows in the section.
-    return 1;
+    NSArray *wordList = [self.dictionary wordArrayForIndex:section];
+    return wordList.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     static NSString *CellIdentifier = @"DictionaryCell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    DictionaryCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+        cell = [[DictionaryCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
     }
     
     // Configure the cell...
+    NSArray *wordList = [self.dictionary wordArrayForIndex:indexPath.section];
+    Word *theWord = wordList[indexPath.row];
+    [cell initWithWord:theWord];
     
     return cell;
+}
+
+- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
+{
+    return [self.dictionary letterFromInt:section];
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -69,53 +81,6 @@
     return 60.0f;
 }
 
-
-- (void)dismiss
-{
-    [self dismissViewControllerAnimated:YES completion:nil];
-}
-
-
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
-}
-*/
-
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    }   
-    else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
-}
-*/
-
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath
-{
-}
-*/
-
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
-
-/*
 #pragma mark - Table view delegate
 
 // In a xib-based application, navigation from a table can be handled in -tableView:didSelectRowAtIndexPath:
@@ -123,14 +88,16 @@
 {
     // Navigation logic may go here, for example:
     // Create the next view controller.
-    <#DetailViewController#> *detailViewController = [[<#DetailViewController#> alloc] initWithNibName:@"<#Nib name#>" bundle:nil];
+    WordEditViewController *wevc = [[WordEditViewController alloc] initWithNibName:@"WordEditViewController" bundle:nil];
 
     // Pass the selected object to the new view controller.
+    NSArray *wordList = [self.dictionary wordArrayForIndex:indexPath.section];
+    Word *theWord = wordList[indexPath.row];
+    [wevc initWithWord:theWord];
     
     // Push the view controller.
-    [self.navigationController pushViewController:detailViewController animated:YES];
+    [self.navigationController pushViewController:wevc animated:YES];
 }
- 
- */
+
 
 @end

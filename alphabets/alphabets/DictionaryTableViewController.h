@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Dictionary.h"
 
 @interface DictionaryTableViewController : UITableViewController
+
+@property (nonatomic, strong) Dictionary *dictionary;
 
 @end

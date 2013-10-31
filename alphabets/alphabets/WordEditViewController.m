@@ -23,10 +23,17 @@
     return self;
 }
 
+- (void) initWithWord:(Word *)word
+{
+    self.word = word;
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    self.wordLabel.text = self.word.word;
+    [self.wordImage setImage:self.word.image];
 }
 
 - (void)didReceiveMemoryWarning
