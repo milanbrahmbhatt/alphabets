@@ -7,8 +7,11 @@
 //
 
 #import "WordEditViewController.h"
+#import "ImageBrowserViewController.h"
+#import "UIImageView+AFNetworking.h"
 
 @interface WordEditViewController ()
+- (IBAction)editImage:(id)sender;
 
 @end
 
@@ -42,4 +45,16 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)editImage:(id)sender {
+    ImageBrowserViewController* imageBrowserController = (ImageBrowserViewController*)[[UIStoryboard storyboardWithName:@"Storyboard" bundle:nil] instantiateViewControllerWithIdentifier:@"ImageBrowserViewController"];
+    
+    [self.navigationController pushViewController:imageBrowserController animated:YES];
+    imageBrowserController.imageBrowserDelegate = self;
+    [imageBrowserController findImagesForWord:self.word.word];
+}
+
+- (void)updateImageWithUrl: (NSString *)url {
+    [self.wordImage setImage:nil];
+    [self.wordImage setImageWithURL:[NSURL URLWithString:url]];
+}
 @end

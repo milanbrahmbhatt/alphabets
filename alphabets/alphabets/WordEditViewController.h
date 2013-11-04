@@ -8,8 +8,9 @@
 
 #import <UIKit/UIKit.h>
 #import "Word.h"
+#import "ImageBrowserViewController.h"
 
-@interface WordEditViewController : UIViewController
+@interface WordEditViewController : UIViewController<ImageBrowserViewControllerDelegate>
 
 @property (weak, nonatomic) IBOutlet UILabel *wordLabel;
 @property (weak, nonatomic) IBOutlet UIImageView *wordImage;
