@@ -7,9 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1332E95218272F640022474C /* WordView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1332E95018272F640022474C /* WordView.m */; };
+		1332E95318272F640022474C /* WordView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1332E95118272F640022474C /* WordView.xib */; };
+		1332E95618272F7A0022474C /* LetterSelectorCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1332E95518272F7A0022474C /* LetterSelectorCell.m */; };
+		1332E95918272F830022474C /* AlphabetModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1332E95818272F830022474C /* AlphabetModel.m */; };
 		56546E3F181F1D8100BD37E2 /* AlphabetsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 56546E3E181F1D8100BD37E2 /* AlphabetsViewController.m */; };
 		56546E42181F1DDC00BD37E2 /* LetterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 56546E41181F1DDC00BD37E2 /* LetterViewController.m */; };
-		56546E45181F1E3900BD37E2 /* ModelController.m in Sources */ = {isa = PBXBuildFile; fileRef = 56546E44181F1E3900BD37E2 /* ModelController.m */; };
 		56546E47181F2A7F00BD37E2 /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 56546E46181F2A7F00BD37E2 /* Storyboard.storyboard */; };
 		56546E50181F666F00BD37E2 /* cartoon-ant-8.gif in Resources */ = {isa = PBXBuildFile; fileRef = 56546E4F181F666F00BD37E2 /* cartoon-ant-8.gif */; };
 		566AF3C518184FDF003A00E7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 566AF3C418184FDF003A00E7 /* Foundation.framework */; };
@@ -73,12 +76,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1332E94F18272F640022474C /* WordView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WordView.h; sourceTree = "<group>"; };
+		1332E95018272F640022474C /* WordView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WordView.m; sourceTree = "<group>"; };
+		1332E95118272F640022474C /* WordView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WordView.xib; sourceTree = "<group>"; };
+		1332E95418272F7A0022474C /* LetterSelectorCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LetterSelectorCell.h; sourceTree = "<group>"; };
+		1332E95518272F7A0022474C /* LetterSelectorCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LetterSelectorCell.m; sourceTree = "<group>"; };
+		1332E95718272F830022474C /* AlphabetModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlphabetModel.h; sourceTree = "<group>"; };
+		1332E95818272F830022474C /* AlphabetModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlphabetModel.m; sourceTree = "<group>"; };
 		56546E3D181F1D8100BD37E2 /* AlphabetsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlphabetsViewController.h; sourceTree = "<group>"; };
 		56546E3E181F1D8100BD37E2 /* AlphabetsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlphabetsViewController.m; sourceTree = "<group>"; };
 		56546E40181F1DDC00BD37E2 /* LetterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LetterViewController.h; sourceTree = "<group>"; };
 		56546E41181F1DDC00BD37E2 /* LetterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LetterViewController.m; sourceTree = "<group>"; };
-		56546E43181F1E3900BD37E2 /* ModelController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ModelController.h; sourceTree = "<group>"; };
-		56546E44181F1E3900BD37E2 /* ModelController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ModelController.m; sourceTree = "<group>"; };
 		56546E46181F2A7F00BD37E2 /* Storyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Storyboard.storyboard; sourceTree = "<group>"; };
 		56546E4F181F666F00BD37E2 /* cartoon-ant-8.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "cartoon-ant-8.gif"; sourceTree = "<group>"; };
 		566AF3C118184FDF003A00E7 /* alphabets.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = alphabets.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -255,6 +263,8 @@
 		566AF3F41818506F003A00E7 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				1332E95718272F830022474C /* AlphabetModel.h */,
+				1332E95818272F830022474C /* AlphabetModel.m */,
 				6B825BB61818D1610050EDBF /* Word.h */,
 				6B825BB71818D1610050EDBF /* Word.m */,
 				6B825BB91818D2740050EDBF /* Dictionary.h */,
@@ -266,6 +276,11 @@
 		566AF3F518185075003A00E7 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				1332E95418272F7A0022474C /* LetterSelectorCell.h */,
+				1332E95518272F7A0022474C /* LetterSelectorCell.m */,
+				1332E94F18272F640022474C /* WordView.h */,
+				1332E95018272F640022474C /* WordView.m */,
+				1332E95118272F640022474C /* WordView.xib */,
 				56546E46181F2A7F00BD37E2 /* Storyboard.storyboard */,
 				6BC7E2E9181F3860008BEF8F /* DictionaryCell.h */,
 				6BC7E2EA181F3860008BEF8F /* DictionaryCell.m */,
@@ -281,8 +296,6 @@
 				56546E3E181F1D8100BD37E2 /* AlphabetsViewController.m */,
 				56546E40181F1DDC00BD37E2 /* LetterViewController.h */,
 				56546E41181F1DDC00BD37E2 /* LetterViewController.m */,
-				56546E43181F1E3900BD37E2 /* ModelController.h */,
-				56546E44181F1E3900BD37E2 /* ModelController.m */,
 				6B7B2A911819E8FC00513279 /* WordEditViewController.h */,
 				6B7B2A921819E8FC00513279 /* WordEditViewController.m */,
 				6B7B2A931819E8FC00513279 /* WordEditViewController.xib */,
@@ -430,6 +443,7 @@
 				6B1419701820D8250038B2D5 /* cat.jpg in Resources */,
 				6B14197C1820D8250038B2D5 /* owl.jpg in Resources */,
 				6B14196E1820D8250038B2D5 /* apple.jpg in Resources */,
+				1332E95318272F640022474C /* WordView.xib in Resources */,
 				6B1419771820D8250038B2D5 /* juice.jpg in Resources */,
 				6B7B2A951819E8FC00513279 /* WordEditViewController.xib in Resources */,
 				6B14197A1820D8250038B2D5 /* monkey.jpg in Resources */,
@@ -498,13 +512,15 @@
 			files = (
 				56546E42181F1DDC00BD37E2 /* LetterViewController.m in Sources */,
 				56546E3F181F1D8100BD37E2 /* AlphabetsViewController.m in Sources */,
-				56546E45181F1E3900BD37E2 /* ModelController.m in Sources */,
+				1332E95218272F640022474C /* WordView.m in Sources */,
 				6B7B2A941819E8FC00513279 /* WordEditViewController.m in Sources */,
 				566AF3D518184FDF003A00E7 /* AppDelegate.m in Sources */,
 				6B825BBB1818D2740050EDBF /* Dictionary.m in Sources */,
 				6BC7E2EB181F3860008BEF8F /* DictionaryCell.m in Sources */,
 				566AF3D118184FDF003A00E7 /* main.m in Sources */,
+				1332E95918272F830022474C /* AlphabetModel.m in Sources */,
 				6B825BB81818D1610050EDBF /* Word.m in Sources */,
+				1332E95618272F7A0022474C /* LetterSelectorCell.m in Sources */,
 				6B7B2A991819EA0C00513279 /* DictionaryTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

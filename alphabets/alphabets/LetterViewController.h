@@ -8,7 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface LetterViewController : UIViewController
-@property (strong, nonatomic) IBOutlet UILabel *dataLabel;
-@property (strong, nonatomic) id dataObject;
+@interface LetterViewController : UIViewController<UIScrollViewDelegate, UIPageViewControllerDelegate>
+@property (weak, nonatomic) NSString *currentLetter;
 @end

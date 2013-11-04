@@ -33,7 +33,6 @@
     [self.tableView registerNib:customNib forCellReuseIdentifier:@"DictionaryCell"];
     
     self.dictionary = [[Dictionary alloc] init];
-    [self.dictionary initDictionary];
 }
 
 - (void)didReceiveMemoryWarning

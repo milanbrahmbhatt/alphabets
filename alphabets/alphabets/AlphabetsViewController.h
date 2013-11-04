@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface AlphabetsViewController : UIViewController <UIPageViewControllerDelegate>
-
-@property (strong, nonatomic) UIPageViewController *pageViewController;
+@interface AlphabetsViewController : UIViewController <UICollectionViewDataSource, UICollectionViewDelegate>
 
 @end

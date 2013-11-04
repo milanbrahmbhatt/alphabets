@@ -6,23 +6,27 @@
 //  Copyright (c) 2013 Milan Brahmbhatt. All rights reserved.
 //
 
+#import "AlphabetModel.h"
 #import "AlphabetsViewController.h"
+#import "LetterSelectorCell.h"
 #import "LetterViewController.h"
-#import "ModelController.h"
 
 @interface AlphabetsViewController ()
-@property (readonly, strong, nonatomic) ModelController *modelController;
+
+@property (weak, nonatomic) IBOutlet UICollectionView *lettersCollectionView;
+@property (strong, nonatomic) AlphabetModel *model;
 @end
 
-@implementation AlphabetsViewController
+const int NUM_SECTIONS = 1;
 
-@synthesize modelController = _modelController;
+@implementation AlphabetsViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
+        self.title = @"Alphabets";
     }
     return self;
 }
@@ -30,29 +34,38 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view.
 
+    self.model = [[AlphabetModel alloc] init];
     
-    self.pageViewController = [[UIPageViewController alloc] initWithTransitionStyle:UIPageViewControllerTransitionStyleScroll navigationOrientation:UIPageViewControllerNavigationOrientationHorizontal options:nil];
-    self.pageViewController.delegate = self;
+    self.lettersCollectionView.delegate = self;
+    self.lettersCollectionView.dataSource = self;
+}
+
+- (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView
+{
+    return NUM_SECTIONS;
+}
+
+- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
+{
+    if ([self.model.alphabetList count] == 0) {
+        return 0;
+    }
     
-    LetterViewController *initialLetterViewController = [self.modelController viewControllerAtIndex:0 storyboard:self.storyboard];
-    NSArray *viewControllers = @[initialLetterViewController];
-    [self.pageViewController setViewControllers:viewControllers direction:UIPageViewControllerNavigationDirectionForward animated:NO completion:nil];
+    return [self.model.alphabetList count]/NUM_SECTIONS;
+}
+
+- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    static NSString *identifier = @"Cell";
     
-    self.pageViewController.dataSource = self.modelController;
+    UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:identifier forIndexPath:indexPath];
     
-    [self addChildViewController:self.pageViewController];
-    [self.view addSubview:self.pageViewController.view];
+    UILabel *letterLabel = (UILabel *)[cell viewWithTag:100];
+    NSString *letter =[self.model.alphabetList objectAtIndex:indexPath.item];
+    letterLabel.text = letter;
     
-    // Set the page view controller's bounds using an inset rect so that self's view is visible around the edges of the pages.
-    CGRect pageViewRect = self.view.bounds;
-    self.pageViewController.view.frame = pageViewRect;
-    
-    [self.pageViewController didMoveToParentViewController:self];
-    
-    // Add the page view controller's gesture recognizers to the book view controller's view so that the gestures are started more easily.
-    self.view.gestureRecognizers = self.pageViewController.gestureRecognizers;
+    return cell;
 }
 
 - (void)didReceiveMemoryWarning
@@ -61,18 +74,13 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (ModelController *)modelController
-{
-    // Return the model controller object, creating it if necessary.
-    // In more complex implementations, the model controller may be passed to the view controller.
-    if (!_modelController) {
-        _modelController = [[ModelController alloc] init];
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([segue.identifier isEqualToString:@"ShowLetter"]) {
+        LetterSelectorCell* selectorCell = (LetterSelectorCell*)sender;
+        NSString *letter = selectorCell.letterLabel.text;
+        LetterViewController *letterViewController = segue.destinationViewController;
+        letterViewController.currentLetter = letter;
     }
-    return _modelController;
 }
-
-#pragma mark - UIPageViewController delegate methods
-
-//- (UIPageViewControllerSpineLocation)
 
 @end

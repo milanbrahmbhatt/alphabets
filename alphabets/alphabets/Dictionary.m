@@ -12,14 +12,19 @@
 
 @implementation Dictionary
 
-- (void) initDictionary
+- (id) init
 {
-    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    [defaults setObject:self.dictionary forKey:@"MyDictionary"];
+    self = [super init];
+    if (self) {
+        NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+        [defaults setObject:self.dictionary forKey:@"MyDictionary"];
     
-    if (self.dictionary == nil) {
-        self.dictionary = [self defaultDictionary];
+        if (self.dictionary == nil) {
+            self.dictionary = [self defaultDictionary];
+        }
     }
+    
+    return self;
 }
 
 - (BOOL) addWordForLetter:(Word *)word letter:(NSString *)letter

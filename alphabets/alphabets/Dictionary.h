@@ -13,7 +13,6 @@
 
 @property (nonatomic, strong) NSMutableArray *dictionary;
 
-- (void) initDictionary;
 - (BOOL) addWordForLetter:(Word *)word letter:(NSString *)letter;
 - (NSArray *) wordArrayForIndex:(int)index;
 - (NSArray *) wordArrayForLetter:(NSString *)letter;
