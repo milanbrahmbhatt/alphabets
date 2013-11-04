@@ -7,9 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Word.h"
 
 @interface WordView : UIView
 @property (strong, nonatomic) IBOutlet WordView *view;
-@property (weak, nonatomic) IBOutlet UILabel *wordLabel;
-
+@property (weak, nonatomic) Word *word;
 @end

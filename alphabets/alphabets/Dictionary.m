@@ -90,7 +90,7 @@
     wordsForLetter = defaultDictionary[0];
     [wordsForLetter addObject:[[Word alloc] initWithString:@"Apple" letter:@"A" image:[UIImage imageNamed:@"apple.jpg"]]];
     wordsForLetter = defaultDictionary[1];
-    [wordsForLetter addObject:[[Word alloc] initWithString:@"Bat" letter:@"B" image:[UIImage imageNamed:@"bat.jpg"]]];
+    [wordsForLetter addObject:[[Word alloc] initWithString:@"Bat" letter:@"B" image:[UIImage imageNamed:@"bat.png"]]];
     wordsForLetter = defaultDictionary[2];
     [wordsForLetter addObject:[[Word alloc] initWithString:@"Cat" letter:@"C" image:[UIImage imageNamed:@"cat.jpg"]]];
     wordsForLetter = defaultDictionary[3];

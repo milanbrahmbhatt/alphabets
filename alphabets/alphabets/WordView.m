@@ -8,6 +8,12 @@
 
 #import "WordView.h"
 
+@interface WordView ()
+@property (weak, nonatomic) IBOutlet UILabel *wordLabel;
+@property (weak, nonatomic) IBOutlet UIImageView *wordImage;
+
+@end
+
 @implementation WordView
 
 - (id)initWithFrame:(CGRect)frame
@@ -21,13 +27,10 @@
     return self;
 }
 
-/*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect
+- (void)setWord:(Word *)word
 {
-    // Drawing code
+    self.wordLabel.text = word.word;
+    [self.wordImage setImage:word.image];
 }
-*/
 
 @end

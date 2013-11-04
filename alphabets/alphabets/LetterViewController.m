@@ -47,11 +47,11 @@ int origScrollY;
     
     lastScrollX = -1;
     
-    NSInteger numWords = [self wordCount];
+    NSInteger numLetters = [self letterCount];
     
     self.subviews = [NSMutableArray array];
         
-    for (int i = 0; i < numWords; i++) {
+    for (int i = 0; i < numLetters; i++) {
         CGRect frame;
         frame.origin.x = self.scrollView.frame.size.width * i;
         frame.origin.y = 0;
@@ -63,7 +63,7 @@ int origScrollY;
     }
     
     CGRect frame;
-    frame.origin.x = self.scrollView.frame.size.width * (numWords + 1);
+    frame.origin.x = self.scrollView.frame.size.width * (numLetters + 1);
     frame.origin.y = 0;
     frame.size = self.scrollView.frame.size;
     WordView *subview = [[WordView alloc] initWithFrame:frame];
@@ -71,10 +71,10 @@ int origScrollY;
     
     origScrollY = self.scrollView.frame.origin.y;
     
-    CGFloat scrollViewWidth = self.scrollView.frame.size.width * (numWords+1);
+    CGFloat scrollViewWidth = self.scrollView.frame.size.width * (numLetters+1);
     self.scrollView.contentSize = CGSizeMake(scrollViewWidth, self.scrollView.frame.size.height);
     
-    self.pageControl.numberOfPages = numWords;
+    self.pageControl.numberOfPages = numLetters;
     
     self.scrollView.delegate = self;
 }
@@ -96,7 +96,7 @@ int origScrollY;
     self.scrollView.delegate = nil;
 }
 
-- (NSInteger) wordCount {
+- (NSInteger) letterCount {
     return [self.alphabetDictionary.dictionary count];
 }
 
@@ -105,7 +105,7 @@ int origScrollY;
     NSString *letter = [self.alphabetDictionary letterFromInt:currentPage];
     Word *word = [self.alphabetDictionary randomWordForLetter:letter];
     WordView *currentView = (WordView *)[self.subviews objectAtIndex:currentPage];
-    currentView.wordLabel.text = word.word;
+    currentView.word = word;
     
     self.pageControl.currentPage = currentPage;
     _currentPage = currentPage;
@@ -115,11 +115,6 @@ int origScrollY;
 - (void)scrollViewDidScroll:(UIScrollView *)sender
 {
     NSLog(@" Offset = %@ ",NSStringFromCGPoint(self.scrollView.contentOffset));
- 
-    if (self.scrollView.contentOffset.y != origScrollY) {
-        [self.scrollView setContentOffset:CGPointMake(self.scrollView.contentOffset.x, origScrollY)];
-        return;
-    }
     
     if (lastScrollX >= 0 && self.currentLetter != nil) {
         int currentIndex = [self.alphabetDictionary intFromLetter:self.currentLetter];
@@ -135,11 +130,11 @@ int origScrollY;
     CGFloat pageWidth = self.scrollView.frame.size.width;
     int page = floor((self.scrollView.contentOffset.x - pageWidth / 2) / pageWidth) + 1;
     if (page != self.currentPage) {
-        int numWords = [self wordCount];
+        int numWords = [self letterCount];
         if (page >= numWords) {
             page = 0;
             self.currentPage = page;
-            [self.scrollView setContentOffset:CGPointMake(0, origScrollY)];
+            [self.scrollView setContentOffset:CGPointMake(0, 0)];
             [self changePage:nil];
         } else {
             self.currentPage = page;
@@ -152,11 +147,9 @@ int origScrollY;
     // update the scroll view to the appropriate page
     CGRect frame;
     frame.origin.x = self.scrollView.frame.size.width * self.pageControl.currentPage;
-    frame.origin.y = origScrollY;
+    frame.origin.y = 0;
     frame.size = self.scrollView.frame.size;
     [self.scrollView scrollRectToVisible:frame animated:NO];
-
-//    NSLog([NSString stringWithFormat:@"Current Page: %i", self.pageControl.currentPage]);
 }
 
 - (void) setScrollViewOffset: (CGPoint) offset {

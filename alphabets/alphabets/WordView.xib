@@ -7,7 +7,8 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="WordView">
             <connections>
                 <outlet property="view" destination="1" id="6qd-Ce-wqB"/>
-                <outlet property="wordLabel" destination="pbH-ov-uOD" id="bO4-Qb-2da"/>
+                <outlet property="wordImage" destination="E0J-vh-D7E" id="uix-Vd-rP5"/>
+                <outlet property="wordLabel" destination="pbH-ov-uOD" id="a4E-48-Xd2"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -22,10 +23,20 @@
                     <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="E0J-vh-D7E">
+                    <rect key="frame" x="34" y="179" width="248" height="191"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="191" id="w9v-jL-JtB"/>
+                    </constraints>
+                </imageView>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
+                <constraint firstItem="E0J-vh-D7E" firstAttribute="leading" secondItem="1" secondAttribute="leading" constant="34" id="12H-Bq-DTD"/>
                 <constraint firstAttribute="trailing" secondItem="pbH-ov-uOD" secondAttribute="trailing" constant="20" symbolic="YES" id="Ygy-nv-9LX"/>
+                <constraint firstItem="E0J-vh-D7E" firstAttribute="top" secondItem="pbH-ov-uOD" secondAttribute="bottom" constant="28" id="YtJ-g5-1vb"/>
+                <constraint firstAttribute="trailing" secondItem="E0J-vh-D7E" secondAttribute="trailing" constant="38" id="euM-Jl-fmI"/>
                 <constraint firstItem="pbH-ov-uOD" firstAttribute="leading" secondItem="1" secondAttribute="leading" constant="20" symbolic="YES" id="lw3-7e-VGf"/>
                 <constraint firstItem="pbH-ov-uOD" firstAttribute="top" secondItem="1" secondAttribute="top" constant="130" id="pZF-oa-2PR"/>
             </constraints>
