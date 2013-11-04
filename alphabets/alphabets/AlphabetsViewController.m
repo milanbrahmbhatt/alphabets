@@ -10,11 +10,14 @@
 #import "AlphabetsViewController.h"
 #import "LetterSelectorCell.h"
 #import "LetterViewController.h"
+#import "DictionaryTableViewController.h"
 
 @interface AlphabetsViewController ()
 
 @property (weak, nonatomic) IBOutlet UICollectionView *lettersCollectionView;
 @property (strong, nonatomic) AlphabetModel *model;
+
+- (void)editDictionary;
 @end
 
 const int NUM_SECTIONS = 1;
@@ -39,6 +42,10 @@ const int NUM_SECTIONS = 1;
     
     self.lettersCollectionView.delegate = self;
     self.lettersCollectionView.dataSource = self;
+    
+    UIBarButtonItem *rightButton = [[UIBarButtonItem alloc] initWithTitle:@"Edit"
+                                                                    style:UIBarButtonItemStylePlain target:self action:@selector(editDictionary)];
+    self.navigationItem.rightBarButtonItem = rightButton;
 }
 
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView
@@ -81,6 +88,13 @@ const int NUM_SECTIONS = 1;
         LetterViewController *letterViewController = segue.destinationViewController;
         letterViewController.currentLetter = letter;
     }
+}
+
+- (void)editDictionary
+{
+    DictionaryTableViewController* editViewController = [[DictionaryTableViewController alloc] init];
+    
+    [self.navigationController pushViewController:editViewController animated:YES];
 }
 
 @end

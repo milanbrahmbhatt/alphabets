@@ -14,7 +14,7 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="KZF-rw-0ec">
-                        <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
+                        <rect key="frame" x="52" y="0.0" width="60" height="60"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="60" id="KZc-2D-g7A"/>
@@ -22,7 +22,7 @@
                         </constraints>
                     </imageView>
                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="A Word" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3de-Pu-2NA">
-                        <rect key="frame" x="68" y="10" width="180" height="40"/>
+                        <rect key="frame" x="120" y="10" width="180" height="40"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="40" id="SDz-eh-L0e"/>
@@ -33,10 +33,10 @@
                     </label>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="KZF-rw-0ec" firstAttribute="leading" secondItem="wyD-0S-TlY" secondAttribute="leading" id="7zZ-wk-xlf"/>
+                    <constraint firstItem="3de-Pu-2NA" firstAttribute="leading" secondItem="KZF-rw-0ec" secondAttribute="trailing" constant="8" symbolic="YES" id="8jV-iH-v9M"/>
                     <constraint firstItem="3de-Pu-2NA" firstAttribute="top" secondItem="wyD-0S-TlY" secondAttribute="top" constant="10" id="Dwu-S4-j3a"/>
+                    <constraint firstAttribute="trailing" secondItem="3de-Pu-2NA" secondAttribute="trailing" constant="20" symbolic="YES" id="VF9-AB-kYv"/>
                     <constraint firstItem="KZF-rw-0ec" firstAttribute="top" secondItem="wyD-0S-TlY" secondAttribute="top" id="uvr-eB-v1h"/>
-                    <constraint firstItem="3de-Pu-2NA" firstAttribute="leading" secondItem="KZF-rw-0ec" secondAttribute="trailing" constant="8" id="zxJ-d4-f1k"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>
